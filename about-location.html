@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>찾아오시는 길 - FANKOREA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_new.css">
     <style>
         .map-container {
             margin: 20px 0;
@@ -15,6 +15,25 @@
         #map {
             width: 100%;
             height: 400px;
+        }
+        .location-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .location-info {
+            margin-bottom: 2rem;
+        }
+        .location-info h3 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .location-info p {
+            color: #666;
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -57,18 +76,16 @@
     </div>
 
     <!-- Location Section -->
-    <section class="location">
+    <section class="location" style="margin-top: -2rem;">
         <div class="location-content">
-            <h2>찾아오시는 길</h2>
             <div class="location-info">
                 <h3>시흥 사무소</h3>
                 <p>📍 주소 : 경기도 시흥시 진말로 3번길 16 한림빌딩 702호</p>
                 <p>📞 전화 : 031-365-5997</p>
                 <p>✉️ 이메일 : ceo@fan-korea.com</p>
-                
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
             </div>
         </div>
     </section>

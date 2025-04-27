@@ -4,7 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회사개요 - FANKOREA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_new.css">
+    <style>
+        .overview {
+            margin-top: -3rem;
+        }
+        .overview-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .overview-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .overview-table .table-row {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        .overview-table .table-row:last-child {
+            border-bottom: none;
+        }
+        .overview-table .table-header {
+            width: 200px;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            font-weight: bold;
+            text-align: center;
+            border-right: 1px solid #ddd;
+        }
+        .overview-table .table-content {
+            flex: 1;
+            padding: 1rem;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <!-- Header and Navigation -->
@@ -47,7 +83,6 @@
     <!-- Company Overview Section -->
     <section class="overview">
         <div class="overview-content">
-            <h2>회사 개요</h2>
             <div class="overview-table">
                 <div class="table-row">
                     <div class="table-header">회사명</div>
