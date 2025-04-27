@@ -2,9 +2,10 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>FANKOREA - 전문적인 환기 시스템 솔루션</title>
     <link rel="stylesheet" href="styles_new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
     <!-- Header and Navigation -->
@@ -88,5 +89,13 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const overviewHeaderText = document.querySelector('.overview-header-text');
+            if (overviewHeaderText) {
+                overviewHeaderText.style.top = '75%';
+            }
+        });
+    </script>
 </body>
 </html> 
