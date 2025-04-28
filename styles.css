@@ -1,0 +1,1098 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+.submenu {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.submenu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.submenu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.submenu-links li {
+    margin: 0 0.5rem;
+    flex-shrink: 0;
+}
+
+.submenu-links li a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.submenu-links li a:hover,
+.submenu-links li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('fankorea-web/images/대문사진.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 0 1rem;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+/* Vision Section */
+.vision {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #f8f9fa;
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vision h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.vision-text {
+    margin: 3rem 0;
+}
+
+.vision-text p {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.vision-description {
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem) !important;
+    font-weight: 400 !important;
+    color: #666 !important;
+    line-height: 1.8 !important;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Core Values Section */
+.core-values {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #fff;
+}
+
+.core-values h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.value-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.value-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.value-item:hover .value-image img {
+    transform: scale(1.1);
+}
+
+.value-item h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: #333;
+}
+
+.value-item p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 1rem;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.about-text {
+    margin-bottom: 3rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+}
+
+/* Products Section */
+.products {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.product-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+}
+
+/* Technical Section */
+.technical {
+    padding: 5rem 1rem;
+    background-color: #f8f9fa;
+}
+
+.technical h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.technical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.technical-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.technical-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.technical-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+    color: #007bff;
+    width: 20px;
+    display: inline-block;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: clamp(2rem, 4vw, 3rem) 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.footer-section p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* Greeting Section */
+.greeting {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #f8f9fa;
+}
+
+.greeting-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.greeting-image {
+    flex: 1;
+}
+
+.greeting-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.greeting-text {
+    flex: 1;
+}
+
+.greeting-text h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.greeting-text p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Overview Section */
+.overview {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #fff;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overview h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.overview-table {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-header {
+    width: 30%;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+.table-content {
+    width: 70%;
+    padding: 1rem;
+    margin-left: 3rem;
+    color: #666;
+    text-align: left;
+}
+
+/* Partners Section */
+.partners {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #f8f9fa;
+}
+
+.partners-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.partner-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.partner-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.partner-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Location Section */
+.location {
+    padding: clamp(3rem, 5vw, 5rem) 1rem;
+    background-color: #fff;
+}
+
+.location-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.location-info {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.location-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.location-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* About Header Section */
+.about-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.about-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-header-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.about-header-text h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.about-header-text .subtitle {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Base product styles */
+.product-detail {
+    padding: 2rem 1rem 3rem 1rem;
+    background-color: #fff;
+}
+
+.product-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* 시로코팬 스타일 */
+body.products-sirocco .product-detail {
+    padding: 2rem 1rem 3rem 1rem;
+    background-color: #fff;
+}
+
+body.products-sirocco .product-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.products-sirocco .product-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+body.products-sirocco .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-sirocco .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+body.products-sirocco .product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body.products-sirocco .product-description {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+/* 에어포일팬 스타일 */
+body.products-airfoil .product-detail {
+    padding: 2rem 1rem 3rem 1rem;
+    background-color: #fff;
+}
+
+body.products-airfoil .product-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.products-airfoil .product-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+body.products-airfoil .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-airfoil .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+body.products-airfoil .product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+body.products-airfoil .product-description {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+/* 벤토라 스타일 */
+body.products-ventura .product-detail {
+    padding: 2rem 1rem 3rem 1rem;
+    background-color: #fff;
+}
+
+body.products-ventura .product-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.products-ventura .product-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+body.products-ventura .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body.products-ventura .product-image {
+    width: 100%;
+    max-width: 960px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+body.products-ventura .product-image img {
+    width: 76% !important;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+body.products-ventura .product-description {
+    width: 100%;
+    max-width: 800px;
+    margin: 15rem auto 0;
+    padding: 0;
+}
+
+body.products-ventura .product-description h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+    color: #333;
+    text-align: center;
+}
+
+body.products-ventura .product-description ul {
+    margin-bottom: 3.2rem;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+body.products-ventura .product-description ul li {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+    font-size: 1.1rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* 덕트인라인 스타일 */
+body.products-duct section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-duct section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 유인휀 스타일 */
+body.products-yuin section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-yuin section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 행거팬 스타일 */
+body.products-hanger section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-hanger section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 루프팬 스타일 */
+body.products-roof section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-roof section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 벽부형팬 스타일 */
+body.products-wall section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-wall section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 엑셜팬 스타일 */
+body.products-axial section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-axial section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 인듀서팬 스타일 */
+body.products-inducer section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-inducer section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 천장형 환풍기 스타일 */
+body.products-ceiling section.product-detail .product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body.products-ceiling section.product-detail .product-info .product-image {
+    flex: 0 0 45%;
+    width: 45%;
+    max-width: 450px;
+}
+
+/* 공통 제품 설명 스타일 */
+.product-description h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+    color: #333;
+}
+
+.product-description ul {
+    margin-bottom: 3.2rem;
+}
+
+.product-description ul li {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.product-description .usage-list {
+    margin-top: 2.4rem;
+}
+
+.product-description .usage-list h3 {
+    margin-bottom: 1.2rem;
+}
+
+.product-description .usage-list li {
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    body.products-sirocco .product-info,
+    body.products-airfoil .product-info,
+    body.products-ventura .product-info {
+        flex-direction: column;
+    }
+
+    body.products-sirocco .product-image,
+    body.products-airfoil .product-image,
+    body.products-ventura .product-image {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    body.products-sirocco .product-description,
+    body.products-airfoil .product-description,
+    body.products-ventura .product-description {
+        padding-left: 0;
+    }
+} 
